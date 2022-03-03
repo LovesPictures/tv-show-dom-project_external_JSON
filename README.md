@@ -1,13 +1,11 @@
-# TV Show DOM Project
+# Fetch DOM Project
 
-A starting point for CYF's TV show DOM project
+## Switch to fetching live data!
 
-The requirements for the project are here:
+level 350 is a short level to help you transition to using live data.
 
-https://syllabus.codeyourfuture.io/js-core-3/tv-show-dom-project/readme
+Pre-req: For this level you will have to have learned to use fetch() to GET JSON content from an API.
 
 ## Solution
 
-The solution to this project will be given to you after you have completed it. You will be able to find the solution here
-
-https://github.com/CodeYourFuture/tv-show-dom-project-solution
+![image](https://user-images.githubusercontent.com/25634451/156627614-a560a0c5-3bbb-40e4-9373-2a164ce99180.png)
