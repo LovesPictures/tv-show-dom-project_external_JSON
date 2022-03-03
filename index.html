@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>TV Show Project | Jude Ricketts </title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- insert fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" 
+    integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  
+</head>
+
+<body>
+  <!-- test page  -->
+    <!-- <div id="root"></div> -->
+
+<!-- main container for the page -->
+ <main class="wrapper">
+
+ <!-- HEADER    ------------------------------->
+ <header>
+  <div class="tvlogo">
+    <a id="logo" href="#home"><img src="https://static.tvmaze.com/images/tvm-header-logo.png" alt="Logo Image"></a>
+  </div>     
+   
+  <nav class="main-nav">   
+    <ul>    
+    <a href="#home">Home</a>
+    <a href="#tvShows">TV Shows</a>
+    <a href="#movies">Movies</a>
+    <a href="#originals">Originals</a>
+    <a href="#" >Recent</a>
+    
+    <a href="#"><br><i class="fas fa-bell sub-nav-logo"></i>Account</a> 
+  </ul>
+
+<!-- SEARCH FIELDSETS ------------------------------>
+</nav>
+      <fieldset>
+          <input type="search text"  class="fas s-name textarea"  placeholder="&#xf002; Search name..." />
+          <input type="search text"  class="fas s-seasons textarea"  placeholder="&#xf002; Search seasons..." />
+          <input type="search text"  class="fas s-episodes textarea"  placeholder="&#xf002; Search episode..." />    
+      </fieldset>
+</header>
+
+
+<!-- TEMPLATE FOR EPISODE CARDS  ------------------->
+      <section class="card template" >
+        <img class="thumbNail" src="http://static.tvmaze.com/uploads/images/original_untouched/1/2668.jpg" alt="Image of TV programme"> 
+            <div class="summary">placeholder</div>
+            <div class="name">placeholder </div>
+            <div class="season-episode"> placeholder</div>
+            <div><a href="#fav"><i class="fa fa-heart"></i><a></div>
+      </section>
+
+<!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
+    <script src="episodes.js"></script>
+
+<!-- Loads YOUR javascript code with shows -->
+    <script src="script.js"></script>
+    
+
+<!-- FOOTER ---------------------------------->
+    <footer class="footer">
+        <icons class="icons">
+          <a href="#"><i class="fab fa-facebook-square logo"></i></a>
+          <a href="#"><i class="fab fa-instagram logo"></i></a>
+          <a href="#"><i class="fab fa-twitter logo"></i></a>
+          <a href="#"><i class="fab fa-youtube logo"></i></a>
+        </icons>
+
+        <copy>
+            <a href="https://github.com/LovesPictures" target="_blank"  class="copyright"> <h4>&#169 TVMaze.com</h4>
+        </copy>
+    </footer>
+
+</main>
+     
+  </body>
+</html>
