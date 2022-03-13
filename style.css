@@ -1,26 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 
 /* Global reset */
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
 
 :root {
   --primary: #141414;
-  --light:  #d4d4d4;
-  --dark: 	#686868;
+  --light: #d4d4d4;
+  --dark: #686868;
   --trans: #1f272644;
-  --accent:  #6ec3b9;
+  --accent: #6ec3b9;
   --glow: 0 0 30px 2px var(--accent);
   --glow-2: 0 0 8px 1px var(--accent);
-  --border: 2px solid var(--accent); 
+  --border: 2px solid var(--accent);
   /* font */
-  --font-primary:'Roboto', sans-serif;
+  --font-primary: "Roboto", sans-serif;
 }
+
+/* #root{
+/* replace wrapper 
+} */
 
 /* SCROLLBAR -------------------------------------------- */
 ::-webkit-scrollbar {
@@ -29,7 +33,7 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgb(95, 95, 94); 
+  box-shadow: inset 0 0 6px rgb(95, 95, 94);
   border-radius: 3px;
 }
 
@@ -40,52 +44,49 @@
   right: 10px;
 }
 
-
-html, body {
+html,
+body {
   margin: auto;
   background: var(--primary);
   font-family: var(--font-primary);
-  /* font-family: 'Roboto', sans-serif; */
 }
 
 .wrapper {
-  margin: 0px 0px 20px 0px;  
+  margin: 0px 0px 20px 0px;
   padding: 0px 10px 100px 10px;
   float: left;
 }
 /* HEADER  ---------------------------------------------------------*/
 
-header {  
+header {
   font-family: var(--font-primary);
   padding: 0px 10px 10px 10px;
   position: sticky;
   top: 0;
   background-color: var(--primary);
-  width:100%;
-
+  width: 100%;
 }
-h1, h4, p {
- color: var(--light);
+h1,
+h4,
+p {
+  color: var(--light);
 }
-
 
 .tvlogo img {
   max-width: 25%;
   min-width: 150px;
   box-shadow: var(--glow);
-  margin: 20px 0px 10px 10px
+  margin: 20px 0px 10px 10px;
 }
-
 
 .main-nav {
   padding: 20px 0px 10px 0px;
-  /* margin: 10px 0px 30px 0px; */
 }
 
 .main-nav a {
   color: var(--light);
   text-decoration: none;
-  margin: 5px;  
+  margin: 5px;
 }
 
 .main-nav a:hover {
@@ -107,34 +108,97 @@ h1, h4, p {
   color: var(--dark);
 }
 
-/* SEARCH FIELDSETS  -------------------------------------- */
-/* hide things that are not relevent to the search  */
-.hide{
+/* HIDDEN SEARCH FIELDSET  -------------------------------------- */
+/* hide things that are not relevant to the search  */
+.hide {
   display: none;
 }
+/* hides the dropdown template option */
+.template-option {
+  display: none;
+}
+/* episode display container */
+.display {
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--light);
+  min-width: 345px;
+  font: inherit;
+  padding: 10px 10px;
+  font-size: 16px;
+}
+
 fieldset {
   border: 0px;
 }
 
-input[type=text] {
+input[type="text"] {
   font-family: var(--font-primary);
-  /* font-family: Arial, Helvetica, sans-serif; */
-  }
+}
 
-input:focus {
+/* select {
+  line-height: 2px;
+  font: inherit;
+  font-size: 16px;
+} */
+
+input:focus,
+select {
   font-family: inherit;
   color: #141414;
   background-color: var(--accent);
-  }
+}
 
-.s-name, .s-seasons, .s-episodes  {
-  /* font-family: Arial, Helvetica, sans-serif;   */
-	background-color: var(--primary);
-	color:var(--light);
+.select {
+  background-color: var(--primary);
+  color: var(--light);
+  margin: 10px 10px 8px 8px;
+  font: inherit;
+  padding: 10px 10px;
+  font-size: 16px;
+  font-weight: normal;
+  max-width: 0%;
+  min-width: 345px;
+
+  box-shadow: var(--glow-2);
+  border-radius: 4px;
+}
+
+button {
+  margin: 5px 10px 10px 10px;
+
+  width: 10rem;
+  height: 40px;
+
+  border: none;
+  transition: 0.6s;
+  overflow: hidden;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: var(--glow-2);
+}
+button:hover {
+  background-color: var(--Bg2-secondary-color);
+  color: var(--accent);
+}
+
+.s-resetBtn {
+  background-color: var(--accent);
+}
+
+.s-name,
+.s-seasons,
+.s-episodes {
+  background-color: var(--primary);
+  color: var(--light);
   margin: 10px 5px 8px 8px;
-	padding: 10px 10px;
-	font-size: 16px;
-	font-weight: normal;
+  font: inherit;
+  padding: 10px 10px;
+  font-size: 16px;
+  font-weight: normal;
   max-width: 100%;
   min-width: 345px;
 
@@ -145,19 +209,18 @@ input:focus {
 /* EPISODE CARDS--------------------------------------------------*/
 
 /* 1 remove the styling  2 apply CSS grid  3 branch the site to experiment  4 mobile first  */
-/* look a sematic HTML - accessibiltiy  */
-.card {  
+/* look a sematic HTML - accessability  */
+.card {
   max-width: 30%;
   min-width: 350px;
   height: 270px;
   position: relative;
-  float: left; 
+  float: left;
   margin: 10px 10px 20px 10px;
   border-radius: 4px;
   box-shadow: var(--glow-2);
   overflow: hidden;
   z-index: -1;
-
 }
 /* this after card - order matters! */
 .template {
@@ -181,9 +244,8 @@ input:focus {
 }
 
 ul {
- margin: 10px 10px;
-
- }
+  margin: 10px 10px;
+}
 
 /* episode text */
 .summary {
@@ -191,7 +253,7 @@ ul {
   width: 100%;
   height: 100%;
   bottom: 0;
-  position:absolute;
+  position: absolute;
   padding: 190px 10px 5px 10px;
   color: var(--light);
   background: var(--trans);
@@ -200,7 +262,6 @@ ul {
   line-height: 1.4;
   font-size: 16px;
   font-weight: 600;
-  
 }
 
 p {
@@ -211,30 +272,30 @@ p {
 }
 
 /* episode image */
-.thumbNail{
+.thumbNail {
   /* 100% of the parent container */
   width: 100%;
   height: 100%;
-  object-fit: cover;  
+  object-fit: cover;
   bottom: 0;
-  position:absolute;
+  position: absolute;
   border-radius: 4px;
 }
 
 .name {
   position: absolute;
-  color:var(--light);
-  top:0px;
-  left:0px;
-  padding:10px 0px 0px 10px;
+  color: var(--light);
+  top: 0px;
+  left: 0px;
+  padding: 10px 0px 0px 10px;
 }
 
-.season-episode{
+.season-episode {
   position: absolute;
-  color:var(--light);
-  top:40px;
-  left:0px;
-  padding:10px 0px 0px 10px;
+  color: var(--light);
+  top: 40px;
+  left: 0px;
+  padding: 10px 0px 0px 10px;
 }
 
 /* Footer --------------------------- */
@@ -246,7 +307,7 @@ p {
 
 .fab {
   font-size: 30px;
-  color: var(--light);       
+  color: var(--light);
   padding: 10px;
   bottom: 0px;
 }
@@ -255,11 +316,10 @@ a:link {
   text-decoration: none;
 }
 
-.footer  {
+.footer {
   padding: 5px 10px 10px 10px;
   position: fixed;
   bottom: 0px;
   background-color: var(--primary);
-  width:100%; 
-
+  width: 100%;
 }
